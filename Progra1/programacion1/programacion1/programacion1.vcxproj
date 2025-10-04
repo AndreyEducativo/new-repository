@@ -123,7 +123,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Carnet.cpp" />
+    <ClCompile Include="Estudiante.cpp" />
+    <ClCompile Include="Grupo.cpp" />
+    <ClCompile Include="Guarda.cpp" />
+    <ClCompile Include="Persona.cpp" />
+    <ClCompile Include="Profesor.cpp" />
     <ClCompile Include="programacion1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Carnet.h" />
+    <ClInclude Include="Estudiante.h" />
+    <ClInclude Include="Grupo.h" />
+    <ClInclude Include="Guarda.h" />
+    <ClInclude Include="Persona.h" />
+    <ClInclude Include="Profesor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

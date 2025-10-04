@@ -1,10 +1,17 @@
-// archivo en el main new repository github
-
 #include <iostream>
-using namespace std; 
+#include "Persona.h"
+#include "Estudiante.h"
+#include "Profesor.h"
+#include "Guarda.h"
+#include "Grupo.h"
+using namespace std;
 
-int main()
-{
-	cout << "Hello World!\n" << endl; // prints Hello World!, \n and endl are both used to create a new line
-	return 0; 
+int main() {
+    Estudiante estudiantes[3]; // arreglo vacío
+    Profesor profe;            // profesor vacío
+    Grupo grupo("TI", profe, estudiantes);
+
+    grupo.RegistrarEstudiantes();
+
+    return 0;
 }
