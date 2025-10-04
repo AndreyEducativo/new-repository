@@ -11,6 +11,7 @@ public:
     Estudiante Estudiantes[3];
 
     Grupo(string Nombre, Profesor profe, Estudiante estudiantes[3]);
+    Grupo(); // Constructor por defecto
 
     void Mostrar();
     void RegistrarEstudiantes();

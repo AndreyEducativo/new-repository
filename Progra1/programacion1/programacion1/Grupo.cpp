@@ -2,12 +2,16 @@
 #include <iostream>
 using namespace std;
 
-Grupo::Grupo(string Nombre, Profesor profe, Estudiante estudiantes[3]) {
+Grupo::Grupo(string Nombre, Profesor profe, Estudiante estudiantes[3]) { // Constructor con parámetros
     this->Nombre = Nombre;
     this->Profe = profe;
     for (int i = 0; i < 3; i++) {
         this->Estudiantes[i] = estudiantes[i];
     }
+}
+
+Grupo::Grupo() // Constructor por defecto
+{
 }
 
 void Grupo::Mostrar() {

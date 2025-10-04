@@ -12,7 +12,8 @@ Persona::Persona(string nombre, string cedula, int edad) : Nombre(nombre), Cedul
 
 void Persona::Mostrar()
 {
-	cout << "Nombre:" << Nombre;
+	cout << "Nombre:";
+	cin >> Nombre;
 }
 
 Persona::Persona()
