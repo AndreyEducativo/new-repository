@@ -42,7 +42,10 @@ int main() {
     }
     lista.Mostrar();
 
-}
+    int valorUsuario; 
+    cout << "Ingrese el valor para ver la posicion del nodo. " << endl; 
+    cin >> valorUsuario; 
+    lista.Buscar(valorUsuario); 
 	/*
     //llamar a todas las clases 
     Persona persona;

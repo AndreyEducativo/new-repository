@@ -11,7 +11,7 @@ ListaDoble::ListaDoble() : head(nullptr)
 void ListaDoble::Insertar(int valor) {
 
 	if (Existe(valor)) {
-		cout << "El valor" << valor << "ya existe en la lista." << endl; 
+		cout << "El valor " << valor << " ya existe en la lista." << endl; 
 		return; 
 	}
 
