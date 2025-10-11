@@ -1,4 +1,4 @@
-﻿  ListaEnlazada.cpp
-  programacion1.cpp
-  Generando código...
-  programacion1.vcxproj -> C:\Users\estudiante\Source\Repos\new-repository\Progra1\programacion1\x64\Debug\programacion1.exe
+﻿  programacion1.cpp
+C:\Users\estudiante\source\repos\new-repository\Progra1\programacion1\programacion1\programacion1.cpp(127,5): error C2059: error de sintaxis: 'return'
+C:\Users\estudiante\source\repos\new-repository\Progra1\programacion1\programacion1\programacion1.cpp(128,1): error C2059: error de sintaxis: '}'
+C:\Users\estudiante\source\repos\new-repository\Progra1\programacion1\programacion1\programacion1.cpp(128,1): error C2143: error de sintaxis: falta ';' delante de '}'

@@ -1,5 +1,6 @@
 #include "ListaEnlazada.h"
 #include <iostream>
+#include "ListaDoble.h"
 using namespace std;
 
 ListaEnlazada::ListaEnlazada()
@@ -7,53 +8,40 @@ ListaEnlazada::ListaEnlazada()
 	cabeza = nullptr;
 }
 
-void ListaEnlazada::Insertar(int valor) 
-{ 
+
+
+void ListaEnlazada::Insertar(int valor)
+{
 	Nodo* nuevo = new Nodo(valor);
 	nuevo->siguiente = cabeza;
 	cabeza = nuevo;
+
 }
 
 void ListaEnlazada::Mostrar() {
 
 	Nodo* actual = cabeza;
-
-	cout << endl << "INICIO DE LA LISTA" << endl;
 	while (actual != nullptr)
 	{
 		cout << actual->dato << endl;
 		actual = actual->siguiente;
 	}
-	cout << "FINAL DE LA LISTA" << endl << endl;
-
-	cout << "POSICION DE LA LISTA: " << endl; 
-	actual = cabeza;
-	int contador = 0;
-	while (actual != nullptr)
-	{
-		cout << "Posicion " << contador << endl << endl;
-		actual = actual->siguiente;
-		contador++;
-	}
+	cout << "FINAL DE LA LISTA" << endl;
 }
 
-void ListaEnlazada::Buscar()
+void ListaEnlazada::Buscar(int valor)
 {
-	int valor; 
-
+	int posicion = 1;
 	Nodo* actual = cabeza;
-	cout << "Cual valor desea busca?" << endl;
-	cin >> valor;
-	int contador = 0;
 	while (actual != nullptr)
 	{
 		if (actual->dato == valor)
 		{
-			cout << "El valor " << valor << " fue encontrado en la lista en la posicion " << contador << endl;
-			return;
+			cout << "EL dato se encuentra en el nodo:" << posicion << endl;
 		}
+		//cout << actual->dato << endl;
 		actual = actual->siguiente;
+		posicion++;
 	}
-	
+	cout << "FINAL DE LA LISTA" << endl;
 }
-

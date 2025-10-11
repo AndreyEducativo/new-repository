@@ -1,15 +1,48 @@
 #include <iostream>
+//semana 8,9,10
 #include "Persona.h"
 #include "Estudiante.h"
 #include "Profesor.h"
 #include "Guarda.h"
 #include "Carnet.h"
 #include "Grupo.h"
+//semana 11
 #include "Nodo.h"
 #include "ListaEnlazada.h"
+//semana 12
+#include "ListaDoble.h"
+#include "NodoDoble.h"
 using namespace std;
 
 int main() {
+
+    ListaDoble lista;
+
+    bool Continuar = true;
+    string Respuesta = "Si";
+    int dato = 0;
+
+    while (Continuar)
+    {
+        cout << "Ingrese Dato" << endl;
+        cin >> dato;
+        lista.Insertar(dato);
+        cout << "Desea continuar? Si/No" << endl;
+        cin >> Respuesta;
+
+        if (Respuesta == "No" || Respuesta == "no")
+        {
+            Continuar = false;
+        }
+        else
+        {
+            Continuar = true;
+        }
+
+    }
+    lista.Mostrar();
+
+}
 	/*
     //llamar a todas las clases 
     Persona persona;
@@ -43,7 +76,7 @@ int main() {
 	cout << "Direccion de i: " << &i << endl;
 	cout << "Valor de x (direccion de i): " << x << endl;
 	cout << "Valor apuntado por x (valor de i): " << *x << endl << endl;
-    */
+    
 
 
     ListaEnlazada lista;
@@ -88,8 +121,8 @@ int main() {
             cout << "Opcion no valida. Intente de nuevo." << endl;
             }
 		}
-
+        
     }
-
+    */
     return 0;
 }
