@@ -24,7 +24,6 @@ void ListaEnlazada::Mostrar() {
 		cout << actual->dato << endl;
 		actual = actual->siguiente;
 	}
-	cout << "FINAL DE LA LISTA" << endl << endl;
 
 	cout << "POSICION DE LA LISTA: " << endl; 
 	actual = cabeza;
