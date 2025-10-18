@@ -25,7 +25,7 @@ int main() {
         {
             system("cls"); // limpia pantalla antes de cada inserción
 
-            cout << "Ingrese Dato: ";
+            cout << "Ingrese Dato: "; // primer metodo 
             cin >> dato;
             lista.Insertar(dato);
 
@@ -44,10 +44,7 @@ int main() {
             system("cls"); // limpia pantalla
 
             lista.Mostrar();
-            cout << "Desea buscar un valor? s-Si / n-No: ";
-            cin >> Respuesta;
-
-            cout << "Desea eliminar algun dato? s-Si / n-No: ";
+            cout << "Desea eliminar algun dato? s-Si / n-No: "; //tercer metodo 
             cin >> Respuesta;
 
             if (Respuesta == "s" || Respuesta == "S")
@@ -72,7 +69,7 @@ int main() {
 
         lista.Mostrar();
 
-        cout << endl << "El promedio de los datos en la lista es: ";
+		cout << endl << "El promedio de los datos en la lista es: "; // cuarto metodo
         lista.Promedio();
 
 
