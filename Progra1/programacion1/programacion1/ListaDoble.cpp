@@ -8,9 +8,9 @@ ListaDoble::ListaDoble() : head(nullptr)
 }
 
 
-void ListaDoble::Insertar(int valor) {
+void ListaDoble::Insertar(int valor) { // Insertar al inicio
 	NodoDoble* nuevo = new NodoDoble(valor);
-	if (head != nullptr)//LISTA CONTIENE ELEMENTOS
+	if (head != nullptr)
 	{
 		head->anterior = nuevo;
 		nuevo->siguiente = head;
@@ -21,7 +21,7 @@ void ListaDoble::Insertar(int valor) {
 }
 
 #pragma region Metodo Mostrar
-void ListaDoble::Mostrar() {
+void ListaDoble::Mostrar() { // Mostrar la lista desde el head
 	NodoDoble* actual = head;
 	while (actual != nullptr)
 	{
@@ -36,42 +36,22 @@ void ListaDoble::Mostrar() {
 
 }
 
-void ListaDoble::Buscar(int valor)
-{
-	NodoDoble* actual = head;
-	int posicion = 1; // contador para saber en qué posición estamos
-
-	while (actual != nullptr)
-	{
-		if (actual->dato == valor)
-		{
-			cout << "El valor " << valor << " fue encontrado en la posicion " << posicion << "." << endl;
-		}
-		actual = actual->siguiente;
-		posicion++; // aumenta la posición al avanzar
-		break;
-	}
-
-	cout << "El valor " << valor << " no fue encontrado en la lista." << endl;
-
-}
-
-void ListaDoble::Eliminar(int valor)
+void ListaDoble::Eliminar(int valor) // Eliminar un nodo por valor
 {
 	NodoDoble* actual = head;
 	while (actual != nullptr)
 	{
 		if (actual->dato == valor)
 		{
-			if (actual->anterior != nullptr) // NO ES EL PRIMERO
+			if (actual->anterior != nullptr) 
 			{
 				actual->anterior->siguiente = actual->siguiente;
 			}
-			else // ES EL PRIMERO
+			else 
 			{
 				head = actual->siguiente;
 			}
-			if (actual->siguiente != nullptr) // NO ES EL ULTIMO
+			if (actual->siguiente != nullptr) 
 			{
 				actual->siguiente->anterior = actual->anterior;
 			}
@@ -79,6 +59,28 @@ void ListaDoble::Eliminar(int valor)
 			return;
 		}
 		actual = actual->siguiente;
+	}
+}
+
+void ListaDoble::Promedio() // Nuevo método para calcular el promedio
+{
+	NodoDoble* actual = head;
+	int suma = 0;
+	int contador = 0;
+	while (actual != nullptr)
+	{
+		suma += actual->dato;
+		contador++;
+		actual = actual->siguiente;
+	}
+	if (contador > 0)
+	{
+		double promedio = suma / contador;
+		cout << "El promedio de los valores en la lista es: " << promedio << endl;
+	}
+	else
+	{
+		cout << "La lista está vacía. No se puede calcular el promedio." << endl;
 	}
 }
 #pragma endregion

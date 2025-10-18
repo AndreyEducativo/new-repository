@@ -1,4 +1,5 @@
 #include <iostream>
+
 #include "Persona.h"
 #include "Estudiante.h"
 #include "Profesor.h"
@@ -40,20 +41,11 @@ int main() {
                 Continuar = true;
             }
 
-            system("cls"); // limpia antes de la siguiente sección
+            system("cls"); // limpia pantalla
 
+            lista.Mostrar();
             cout << "Desea buscar un valor? s-Si / n-No: ";
             cin >> Respuesta;
-
-            if (Respuesta == "s" || Respuesta == "S")
-            {
-                cout << "Ingrese el dato a buscar: ";
-                cin >> dato;
-                lista.Buscar(dato);
-            }
-            else {
-                cout << "No se realizara la busqueda." << endl;
-            }
 
             cout << "Desea eliminar algun dato? s-Si / n-No: ";
             cin >> Respuesta;
@@ -68,17 +60,20 @@ int main() {
                 cout << "No se eliminara ningun dato." << endl;
             }
 
-            system("pause"); // pausa antes de repetir el ciclo
+            system("pause"); // pausa antes de repetir el bucle
         }
 
         system("cls"); // limpia pantalla antes de mostrar la lista final
         lista.Mostrar();
 
         cout << endl;
-        system("pause");
+        system("pause"); 
 
 
         lista.Mostrar();
+
+        cout << endl << "El promedio de los datos en la lista es: ";
+        lista.Promedio();
 
 
 	/*
