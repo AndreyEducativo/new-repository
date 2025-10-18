@@ -1,5 +1,6 @@
 #include "ListaDoble.h"
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 
@@ -82,5 +83,28 @@ void ListaDoble::Promedio() // Nuevo método para calcular el promedio
 	{
 		cout << "La lista está vacía. No se puede calcular el promedio." << endl;
 	}
+}
+
+void ListaDoble::GuardarEnArchivo()
+{
+	ofstream archivo("datos.txt");
+	if (!archivo)
+	{
+		cout << "No se pudo crear el archivo" << endl;
+	}
+
+	archivo << "Lista Doble" << endl;
+	NodoDoble* actual = head;
+	while (actual != nullptr)
+	{
+		archivo << actual->dato << "<---> ";
+		/*cout << "Direc actual" << actual << " ";
+		cout << "Direc anterior" << actual->anterior << " ";
+		cout << "Direc siguiente" << actual->siguiente << " ";
+		cout << endl;*/
+		actual = actual->siguiente;
+	}
+	archivo.close();
+
 }
 #pragma endregion

@@ -10,5 +10,6 @@ public:
 	void Mostrar();
 	void Eliminar(int valor);
 	void Promedio(); 
+	void GuardarEnArchivo();
 
 };
