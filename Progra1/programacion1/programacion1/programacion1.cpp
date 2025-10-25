@@ -14,7 +14,7 @@
 using namespace std;
 
 int main() {
-
+    
         ListaDoble lista;
 
         bool Continuar = true;
@@ -29,10 +29,10 @@ int main() {
             cin >> dato;
             lista.Insertar(dato);
 
-            cout << "Desea continuar? Si/No: ";
+            cout << "Desea continuar? s-Si/n-No: ";
             cin >> Respuesta;
 
-            if (Respuesta == "No" || Respuesta == "no")
+            if (Respuesta == "N" || Respuesta == "n")
             {
                 Continuar = false;
             }
@@ -72,8 +72,7 @@ int main() {
 		cout << endl << "El promedio de los datos en la lista es: "; // cuarto metodo
         lista.Promedio();
 
-
-	/*
+/*
     //llamar a todas las clases 
     Persona persona;
     Estudiante estudiante;
@@ -154,6 +153,6 @@ int main() {
 		}
 
     }
-     */
+*/
     return 0;
 }
