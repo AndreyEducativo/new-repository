@@ -21,14 +21,14 @@ int main() {
 
     while (continuar) {
         system("cls");
-		// --------- PRIMER MÉTODO: Insertar al inicio ----------
+		// PRIMER MÉTODO: Insertar al inicio 
         cout << "Ingrese un dato: ";
         cin >> dato;
         lista.Insertar(dato);
 
         lista.Mostrar();
 
-        // --------- SEGUNDO MÉTODO: Insertar entre dos nodos ----------
+        // SEGUNDO MÉTODO: Insertar entre dos nodos (no sirve)
         cout << "\nDesea insertar un dato entre dos existentes? (s/n): ";
         cin >> respuesta;
 
@@ -48,7 +48,7 @@ int main() {
             cout << "No se insertara ningun dato nuevo entre nodos." << endl;
         }
 
-        // --------- TERCER MÉTODO: Eliminar nodo ----------
+        // TERCER MÉTODO: Eliminar nodo
         cout << "\nDesea eliminar algun dato? (s/n): ";
         cin >> respuesta;
 
@@ -59,7 +59,7 @@ int main() {
             lista.Mostrar();
         }
 
-        // --------- CONTINUAR O SALIR ----------
+        // CONTINUAR O SALIR
         cout << "\nDesea continuar (s/n): ";
         cin >> respuesta;
         if (respuesta == "n" || respuesta == "N") {
