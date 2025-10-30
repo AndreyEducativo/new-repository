@@ -8,7 +8,7 @@ ListaDoble::ListaDoble() : head(nullptr)
 {
 }
 
-/*
+
 void ListaDoble::Insertar(int valor) { // Insertar al inicio de la lista
 	NodoDoble* nuevo = new NodoDoble(valor);
 	if (head != nullptr)
@@ -20,30 +20,36 @@ void ListaDoble::Insertar(int valor) { // Insertar al inicio de la lista
 	head = nuevo;
 
 }
-*/
-void ListaDoble::InsertarEnPosicion(int valor, int valorNodo) // Insertar en una posición específica
-{
-	NodoDoble* nuevo = new NodoDoble(valor);
-	// incertar al inicio 
-	if (valorNodo <= 0 || head == nullptr)
-	{
-		if (head != nullptr)
-		{
-			head->anterior = nuevo;
-			nuevo->siguiente = head;
-			return;
-		}
-	}
-	NodoDoble* actual = head;
 
-	// recorrer la lista hasta la posicion deseada
-	while (actual->siguiente != nullptr)
-	{
 
-	}
 
 #pragma region Metodo Mostrar
-void ListaDoble::Mostrar() { // Mostrar la lista desde el head
+void ListaDoble::InsertarEnPosicion(int valorAnterior, int valorSiguiente, int nuevoValor)
+{
+    NodoDoble* actual = head; // puntero actual al inicio de la lista
+    while (actual != nullptr) {
+        
+        if (actual->dato == valorAnterior && actual->siguiente != nullptr && actual->siguiente->dato == valorSiguiente) {
+            // nuevo nodo
+            NodoDoble* nuevo = new NodoDoble(nuevoValor);
+
+            // unir punteros
+            nuevo->siguiente = actual->siguiente;
+            nuevo->anterior = actual;
+            actual->siguiente->anterior = nuevo;
+            actual->siguiente = nuevo;
+
+            cout << "Nodo insertado entre " << valorAnterior << " y " << valorSiguiente << endl;
+            return;
+        }
+
+        actual = actual->siguiente;
+    }
+
+    cout << "No se encontraron los valores " << valorAnterior << " y " << valorSiguiente << " consecutivos." << endl;
+}
+
+void ListaDoble::Mostrar() { 
 	NodoDoble* actual = head;
 	while (actual != nullptr)
 	{

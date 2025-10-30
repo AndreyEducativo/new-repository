@@ -7,7 +7,8 @@ public:
 	ListaDoble();
 
 	//void Insertar(int valor);
-	void InsertarEnPosicion(int valor, int valorNodo);
+	void Insertar(int valor);
+	void InsertarEnPosicion(int valorAnterior, int valorSiguiente, int nuevoValor);
 	void Mostrar();
 	void Eliminar(int valor);
 	void Promedio(); 
