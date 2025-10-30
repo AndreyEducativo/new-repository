@@ -28,7 +28,7 @@ int main() {
 
         lista.Mostrar();
 
-        // SEGUNDO MÉTODO: Insertar entre dos nodos (no sirve)
+        // SEGUNDO MÉTODO: Insertar entre dos nodos (no sirve/revisar)
         cout << "\nDesea insertar un dato entre dos existentes? (s/n): ";
         cin >> respuesta;
 
