@@ -14,7 +14,7 @@
 using namespace std;
 
 int main() {
-    ListaDoble lista;
+   /*ListaDoble lista;
     bool continuar = true;
     string respuesta;
     int dato = 0;
@@ -77,6 +77,6 @@ int main() {
 
     cout << endl;
     system("pause");
-
+    */
     return 0;
 }
