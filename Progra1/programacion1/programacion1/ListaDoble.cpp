@@ -26,27 +26,33 @@ void ListaDoble::Insertar(int valor) { // Insertar al inicio de la lista
 #pragma region Metodo Mostrar
 void ListaDoble::InsertarEnPosicion(int valorAnterior, int valorSiguiente, int nuevoValor)
 {
-    NodoDoble* actual = head; // puntero actual al inicio de la lista
-    while (actual != nullptr) {
-        
-        if (actual->dato == valorAnterior && actual->siguiente != nullptr && actual->siguiente->dato == valorSiguiente) {
-            // nuevo nodo
-            NodoDoble* nuevo = new NodoDoble(nuevoValor);
+	NodoDoble* actual = head;
 
-            // unir punteros
-            nuevo->siguiente = actual->siguiente;
-            nuevo->anterior = actual;
-            actual->siguiente->anterior = nuevo;
-            actual->siguiente = nuevo;
+	while (actual != nullptr) {
+		if (actual->dato == valorAnterior) {
+			NodoDoble* siguiente = actual->siguiente;
 
-            cout << "Nodo insertado entre " << valorAnterior << " y " << valorSiguiente << endl;
-            return;
-        }
+			// Avanzar hasta encontrar el valor siguiente
+			while (siguiente != nullptr && siguiente->dato != valorSiguiente) {
+				siguiente = siguiente->siguiente;
+			}
 
-        actual = actual->siguiente;
-    }
+			if (siguiente != nullptr) {
+				NodoDoble* nuevo = new NodoDoble(nuevoValor);
 
-    cout << "No se encontraron los valores " << valorAnterior << " y " << valorSiguiente << " consecutivos." << endl;
+				nuevo->siguiente = siguiente;
+				nuevo->anterior = siguiente->anterior;
+				siguiente->anterior->siguiente = nuevo;
+				siguiente->anterior = nuevo;
+
+				cout << "Nodo insertado entre " << valorAnterior << " y " << valorSiguiente << endl;
+				return;
+			}
+		}
+		actual = actual->siguiente;
+	}
+
+	cout << "No se pudieron encontrar los valores indicados en la lista." << endl;
 }
 
 void ListaDoble::Mostrar() { 
