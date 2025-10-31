@@ -39,7 +39,7 @@ void ListaDoble::InsertarEnPosicion(int valorAnterior, int valorSiguiente, int n
 
 			if (siguiente != nullptr) {
 				NodoDoble* nuevo = new NodoDoble(nuevoValor);
-
+				//unir los nodos 
 				nuevo->siguiente = siguiente;
 				nuevo->anterior = siguiente->anterior;
 				siguiente->anterior->siguiente = nuevo;
