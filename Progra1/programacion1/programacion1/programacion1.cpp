@@ -1,82 +1,84 @@
 #include <iostream>
 
-#include "Persona.h"
-#include "Estudiante.h"
-#include "Profesor.h"
-#include "Guarda.h"
-#include "Carnet.h"
-#include "Grupo.h"
-#include "Nodo.h"
-#include "ListaEnlazada.h"
+//#include "Persona.h"
+//#include "Estudiante.h"
+//#include "Profesor.h"
+//#include "Guarda.h"
+//#include "Carnet.h"
+//#include "Grupo.h"
+//#include "Nodo.h"
+//#include "ListaEnlazada.h"
 #include "NodoDoble.h"
 #include "ListaDoble.h"
 
 using namespace std;
 
 int main() {
-   /*ListaDoble lista;
+/*
+Agregar un método a la lista doblemente enlazada para que Busque la posición de los nodos que contienen números
+que son múltiplos del número seleccionado por el Usuario.
+*/ 
+
+//Agregar otro médoto para extraer el promedio de los valores de los nodos.
+
+    ListaDoble lista;
     bool continuar = true;
-    string respuesta;
-    int dato = 0;
+    int opcion;
+    int dato;
 
     while (continuar) {
         system("cls");
-		// PRIMER MÉTODO: Insertar al inicio 
-        cout << "Ingrese un dato: ";
-        cin >> dato;
-        lista.Insertar(dato);
+        cout << "---------------------------------------" << endl;
+        cout << "\t MENU LISTA DOBLEMENTE ENLAZADA " << endl;
+        cout << "1) Insertar datos" << endl;
+        cout << "2) Buscar multiplos" << endl;
+        cout << "3) Promedio" << endl;
+        cout << "4) Mostrar lista" << endl;
+        cout << "0) Salir" << endl;
+        cout << "---------------------------------------" << endl;
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
 
-        lista.Mostrar();
+        system("cls");
 
-        // SEGUNDO MÉTODO: Insertar entre dos nodos (sirve solo del reves)
-        cout << "\nDesea insertar un dato entre dos existentes? (s/n): ";
-        cin >> respuesta;
-
-        if (respuesta == "s" || respuesta == "S") {
-            int valorAnterior, valorSiguiente, nuevoValor;
-            cout << "Ingrese el valor anterior: ";
-            cin >> valorAnterior;
-            cout << "Ingrese el valor siguiente: ";
-            cin >> valorSiguiente;
-            cout << "Ingrese el nuevo valor a insertar entre ellos: ";
-            cin >> nuevoValor;
-
-            lista.InsertarEnPosicion(valorAnterior, valorSiguiente, nuevoValor);
-            lista.Mostrar();
-        }
-        else {
-            cout << "No se insertara ningun dato nuevo entre nodos." << endl;
-        }
-
-        // TERCER MÉTODO: Eliminar nodo
-        cout << "\nDesea eliminar algun dato? (s/n): ";
-        cin >> respuesta;
-
-        if (respuesta == "s" || respuesta == "S") {
-            cout << "Ingrese el dato a eliminar: ";
+        switch (opcion) {
+        case 1:
+            cout << "Ingrese un dato: ";
             cin >> dato;
-            lista.Eliminar(dato);
+            lista.Insertar(dato);
+            cout << "Dato insertado correctamente." << endl;
+            break;
+
+        case 2: {
+            int numero;
+            cout << "Ingrese un numero para buscar sus multiplos: ";
+            cin >> numero;
+            cout << endl; 
+            lista.BuscarMultiplos(numero);
+            break;
+        }
+
+        case 3:
+            lista.Promedio();
+            break;
+
+        case 4:
             lista.Mostrar();
-        }
+            break;
 
-        // CONTINUAR O SALIR
-        cout << "\nDesea continuar (s/n): ";
-        cin >> respuesta;
-        if (respuesta == "n" || respuesta == "N") {
+        case 0:
             continuar = false;
+            cout << "Saliendo del programa..." << endl;
+            break;
+
+        default:
+            cout << "Opcion invalida. Intente nuevamente." << endl;
+            break;
         }
 
+        cout << endl;
         system("pause");
     }
 
-    system("cls");
-    lista.Mostrar();
-
-    cout << "\nEl promedio de los datos en la lista es: ";
-    lista.Promedio();
-
-    cout << endl;
-    system("pause");
-    */
     return 0;
 }

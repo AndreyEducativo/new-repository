@@ -24,6 +24,8 @@ void ListaDoble::Insertar(int valor) { // Insertar al inicio de la lista
 
 
 #pragma region Metodo Mostrar
+
+/*
 void ListaDoble::InsertarEnPosicion(int valorAnterior, int valorSiguiente, int nuevoValor)
 {
 	NodoDoble* actual = head;
@@ -54,6 +56,7 @@ void ListaDoble::InsertarEnPosicion(int valorAnterior, int valorSiguiente, int n
 
 	cout << "No se pudieron encontrar los valores indicados en la lista." << endl;
 }
+*/ 
 
 void ListaDoble::Mostrar() { 
 	NodoDoble* actual = head;
@@ -69,7 +72,7 @@ void ListaDoble::Mostrar() {
 
 
 }
-
+/*
 void ListaDoble::Eliminar(int valor) // Eliminar un nodo por valor
 {
 	NodoDoble* actual = head;
@@ -95,29 +98,30 @@ void ListaDoble::Eliminar(int valor) // Eliminar un nodo por valor
 		actual = actual->siguiente;
 	}
 }
+*/
 
 void ListaDoble::Promedio() // Nuevo método para calcular el promedio
 {
+	if (head == nullptr) {
+		cout << "La lista está vacía." << endl;
+		return;
+	}
+
 	NodoDoble* actual = head;
 	int suma = 0;
 	int contador = 0;
-	while (actual != nullptr)
-	{
+
+	while (actual != nullptr) {
 		suma += actual->dato;
 		contador++;
 		actual = actual->siguiente;
 	}
-	if (contador > 0)
-	{
-		double promedio = suma / contador;
-		cout << "El promedio de los valores en la lista es: " << promedio << endl;
-	}
-	else
-	{
-		cout << "La lista está vacía. No se puede calcular el promedio." << endl;
-	}
+
+	double promedio = static_cast<double>(suma) / contador;
+	cout << "Promedio de los valores: " << promedio << endl;
 }
 
+/*
 void ListaDoble::GuardarEnArchivo()
 {
 	ofstream archivo("datos.txt");
@@ -134,10 +138,31 @@ void ListaDoble::GuardarEnArchivo()
 		/*cout << "Direc actual" << actual << " ";
 		cout << "Direc anterior" << actual->anterior << " ";
 		cout << "Direc siguiente" << actual->siguiente << " ";
-		cout << endl;*/
+		cout << endl;
 		actual = actual->siguiente;
 	}
 	archivo.close();
+}
+*/
 
+void ListaDoble::BuscarMultiplos(int numero)
+{
+	NodoDoble* actual = head;
+	int posicion = 0;
+	bool encontrado = false;
+	while (actual != nullptr)
+	{
+		if (actual->dato % numero == 0)
+		{
+			cout << "El valor " << actual->dato << " en la posicion " << posicion << " es multiplo de " << numero << endl;
+			encontrado = true;
+		}
+		actual = actual->siguiente;
+		posicion++;
+	}
+	if (!encontrado)
+	{
+		cout << "No se encontraron multiplos de " << numero << " en la lista." << endl;
+	}
 }
 #pragma endregion
