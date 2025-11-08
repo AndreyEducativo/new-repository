@@ -33,7 +33,7 @@ int main() {
         cout << "1) Insertar datos" << endl;
         cout << "2) Buscar menor valor" << endl;
         cout << "3) Buscar valor mayor" << endl;
-        cout << "4) Buscar multiplos de un numero" << endl;
+        cout << "4) Buscar numeros pares e impares" << endl;
         cout << "5) Mostrar lista" << endl;
         cout << "0) Salir" << endl;
         cout << "---------------------------------------" << endl;
