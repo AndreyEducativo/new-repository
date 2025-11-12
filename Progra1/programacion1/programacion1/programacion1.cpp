@@ -1,71 +1,67 @@
-#include <iostream>
+/*Crear un Software en C++ que para los siguientes requerimientos. 
 
-//#include "Persona.h"
-//#include "Estudiante.h"
-//#include "Profesor.h"
-//#include "Guarda.h"
-//#include "Carnet.h"
-//#include "Grupo.h"
-//#include "Nodo.h"
-//#include "ListaEnlazada.h"
-#include "NodoDoble.h"
-#include "ListaDoble.h"
+Comercio Electrónico 
+• El sistema debe manejar archivos de texto para Productos, clientes, pedidos y pagos. 
+• Debe haber un menú para poder seleccionar la opción requerida. 
+• Se puede insertar, eliminar o buscar registros. 
+• En clase se hará un ejercicio adicional. 
+
+Entregables 
+Debe entregarse el proyecto en Visual Studio(Preferiblemente en un repositorio GIT). 
+Diagrama de Clases .*/
+
+#include <iostream> 
+#include <string> 
+#include "Producto.h"
+#include "Cliente.h"
+#include "Pedido.h"
+#include "Pago.h"
 
 using namespace std;
 
 int main() {
-    /*
-    Agregar un método a la lista doblemente enlazada para que Busque la posición de los nodos que contienen números
-    que son múltiplos del número seleccionado por el Usuario.
-    */
+	// Crear objetos de las clases
+    Producto producto;
+	Cliente cliente;
+	Pedido pedido;
+	Pago pago;
 
-    //Agregar otro médoto para extraer el promedio de los valores de los nodos.
-
-    ListaDoble lista;
+	//variables para el menu
     bool continuar = true;
     int opc = 0;
-    int dato = 0;
 
-    while (continuar) {
+	while (continuar) { // bucle del menu
         system("cls");
         cout << "---------------------------------------" << endl;
-        cout << "\t MENU LISTA DOBLEMENTE ENLAZADA " << endl;
-        cout << "1) Insertar datos" << endl;
-        cout << "2) Buscar menor valor" << endl;
-        cout << "3) Buscar valor mayor" << endl;
-        cout << "4) Buscar numeros pares e impares" << endl;
-        cout << "5) Mostrar lista" << endl;
-        cout << "0) Salir" << endl;
+        cout << "\t COMERCIO ELECTRONICO " << endl;
+        cout << "1) Productos " << endl;
+        cout << "2) Clientes " << endl;
+        cout << "3) Pedidos " << endl;
+        cout << "4) Pago " << endl;
+        cout << "0) Salir " << endl;
         cout << "---------------------------------------" << endl;
         cout << "Seleccione una opcion: ";
         cin >> opc;
 
         system("cls");
 
-        switch (opc) {
+		switch (opc) { // opciones del menu
         case 1:
-            cout << "Ingrese un dato: ";
-            cin >> dato;
-            lista.Insertar(dato);
-            cout << "Dato insertado correctamente." << endl;
+            producto.agregarProducto();
+            producto.mostrarProducto();
             break;
-
         case 2:
-            lista.MenorValor();
-            break;
-
+            cliente.agregarCliente(); 
+            cliente.mostrarCliente(); 
+			break;
         case 3:
-            lista.MayorValor();
-            break;
-
+            pedido.agregarPedido();
+            pedido.mostrarPedido();
+			break;
         case 4:
-            lista.ParesEImpares();
-            break;
-
-        case 5:
-            lista.Mostrar();
-            break;
-
+			pago.agregarPago();
+            pago.mostrarPago();
+			break;
         case 0:
             continuar = false;
             cout << "Saliendo del programa..." << endl;

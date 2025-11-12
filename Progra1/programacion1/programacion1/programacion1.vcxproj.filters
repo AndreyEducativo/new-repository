@@ -18,42 +18,30 @@
     <ClCompile Include="programacion1.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Persona.cpp">
+    <ClCompile Include="Producto.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Guarda.cpp">
+    <ClCompile Include="Cliente.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Estudiante.cpp">
+    <ClCompile Include="Pedido.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Carnet.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Grupo.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Profesor.cpp">
+    <ClCompile Include="Pago.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Persona.h">
+    <ClInclude Include="Producto.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Guarda.h">
+    <ClInclude Include="Cliente.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Estudiante.h">
+    <ClInclude Include="Pedido.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Carnet.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Grupo.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Profesor.h">
+    <ClInclude Include="Pago.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
