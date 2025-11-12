@@ -14,7 +14,6 @@ class Cliente
 	Cliente(); 
 	Cliente(int Id, string Nombre, string Email); 
 
-protected:
 	// METODOS
 	void agregarCliente();
 	void mostrarCliente();

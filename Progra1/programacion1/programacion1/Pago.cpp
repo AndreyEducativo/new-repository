@@ -3,7 +3,7 @@
 using namespace std;
 
 // CONTRUCTORES
-Pago::Pago() 
+Pago::Pago()
 {
 }
 Pago::Pago(int Id, int IdPedido, double Monto, string Fecha) 

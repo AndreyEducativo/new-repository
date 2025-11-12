@@ -15,7 +15,6 @@ class Pago
 	Pago(); 
 	Pago(int Id, int IdPedido, double Monto, string Fecha); 
 
-protected:
 	// METODOS
 	void agregarPago();
 	void mostrarPago();

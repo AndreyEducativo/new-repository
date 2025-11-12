@@ -14,7 +14,6 @@ public:
 	Producto();
 	Producto(int Id, string Nombre, double Precio);
 
-protected: 
 	// METODOS
 	void agregarProducto();
 	void mostrarProducto();

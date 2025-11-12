@@ -15,7 +15,6 @@ class Pedido
 	Pedido(); 
 	Pedido(int Id, int IdCliente, int IdProducto, int Cantidad); 
 
-protected:
 	// METODOS 
 	void agregarPedido();
 	void mostrarPedido();
