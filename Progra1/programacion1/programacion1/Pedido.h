@@ -12,7 +12,7 @@ class Pedido
 	int cantidad;
 
 	// CONSTRUCTORES
-	Pedido(); 
+	Pedido();
 	Pedido(int Id, int IdCliente, int IdProducto, int Cantidad); 
 
 	// METODOS 

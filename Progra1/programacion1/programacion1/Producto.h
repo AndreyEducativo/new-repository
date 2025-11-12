@@ -11,7 +11,7 @@ public:
 	double precio; 
 
 	//CONSTRUCTORES
-	Producto();
+	Producto(); 
 	Producto(int Id, string Nombre, double Precio);
 
 	// METODOS

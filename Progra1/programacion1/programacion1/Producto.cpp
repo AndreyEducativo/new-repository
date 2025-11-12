@@ -3,9 +3,10 @@
 using namespace std; 
 
 // CONSTRUCTORES
-Producto::Producto() 
+Producto::Producto()
 {
 }
+
 Producto::Producto(int Id, string Nombre, double Precio) 
 {
 	id = Id;

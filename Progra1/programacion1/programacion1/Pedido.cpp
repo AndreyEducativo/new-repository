@@ -3,7 +3,7 @@
 using namespace std;
 
 // CONSTRUCTORES
-Pedido::Pedido() 
+Pedido::Pedido()
 {
 }
 Pedido::Pedido(int Id, int IdCliente, int IdProducto, int Cantidad)

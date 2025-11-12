@@ -12,7 +12,7 @@ class Pago
 	string fecha;
 
 	// CONSTRUCTORES
-	Pago(); 
+	Pago();
 	Pago(int Id, int IdPedido, double Monto, string Fecha); 
 
 	// METODOS
