@@ -2,10 +2,12 @@
 #include <iostream>
 using namespace std;
 
+//CONSTRUCTOR 
 Pedido::Pedido() : id(0), idCliente(0), idProducto(0), cantidad(0)
 {
 }
 
+//METODO AGREGAR PEDIDO 
 void Pedido::agregarPedido()
 {
     cout << "Ingrese ID del pedido: ";
@@ -21,6 +23,7 @@ void Pedido::agregarPedido()
     cin >> cantidad;
 }
 
+// METODO MOSTRAR PEDIDO 
 void Pedido::mostrarPedido()
 {
     cout << "----- PEDIDO -----\n";
@@ -30,6 +33,7 @@ void Pedido::mostrarPedido()
     cout << "Cantidad: " << cantidad << endl;
 }
 
+//METODO GET ID 
 int Pedido::getID()
 {
     return id;

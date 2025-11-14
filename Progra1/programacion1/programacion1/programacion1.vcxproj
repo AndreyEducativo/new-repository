@@ -124,9 +124,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cliente.cpp" />
-    <ClCompile Include="funcionesGlobales.cpp" />
-    <ClCompile Include="ListaBase.cpp" />
-    <ClCompile Include="NodoBase.cpp" />
+    <ClCompile Include="ListaCliente.cpp" />
+    <ClCompile Include="ListaPago.cpp" />
+    <ClCompile Include="ListaPedido.cpp" />
+    <ClCompile Include="ListaProducto.cpp" />
+    <ClCompile Include="NodoCliente.cpp" />
+    <ClCompile Include="NodoPago.cpp" />
+    <ClCompile Include="NodoPedido.cpp" />
+    <ClCompile Include="NodoProducto.cpp" />
     <ClCompile Include="Pago.cpp" />
     <ClCompile Include="Pedido.cpp" />
     <ClCompile Include="Producto.cpp" />
@@ -134,9 +139,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cliente.h" />
-    <ClInclude Include="funcionesGlobales.h" />
-    <ClInclude Include="ListaBase.h" />
-    <ClInclude Include="NodoBase.h" />
+    <ClInclude Include="ListaCliente.h" />
+    <ClInclude Include="ListaPago.h" />
+    <ClInclude Include="ListaPedido.h" />
+    <ClInclude Include="ListaProducto.h" />
+    <ClInclude Include="NodoCliente.h" />
+    <ClInclude Include="NodoPago.h" />
+    <ClInclude Include="NodoPedido.h" />
+    <ClInclude Include="NodoProducto.h" />
     <ClInclude Include="Pago.h" />
     <ClInclude Include="Pedido.h" />
     <ClInclude Include="Producto.h" />

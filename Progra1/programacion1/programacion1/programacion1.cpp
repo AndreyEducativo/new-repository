@@ -1,31 +1,26 @@
 #include <iostream>
 #include <stdlib.h>
-
-#include "ListaBase.h"
-#include "Cliente.h"
-#include "Producto.h"
-#include "Pedido.h"
-#include "Pago.h"
-#include "funcionesGlobales.h"
+#include "ListaCliente.h"
+#include "ListaProducto.h"
+#include "ListaPedido.h"
+#include "ListaPago.h"
 
 using namespace std;
 
-int main()
-{
-    ListaBase listaClientes;
-    ListaBase listaProductos;
-    ListaBase listaPedidos;
-    ListaBase listaPagos;
+int main() {
+    ListaCliente listaClientes;
+    ListaProducto listaProductos;
+    ListaPedido listaPedidos;
+    ListaPago listaPagos;
 
     bool continuar = true;
     int opc = 0;
 
-    while (continuar)
-    {
+    while (continuar) {
         system("cls");
-        cout << "-----------------------------------\n"; 
+        cout << "---------------------------------\n";
         cout << "\tCOMERCIO ELECTRONICO\n";
-        cout << "-----------------------------------\n";
+        cout << "---------------------------------\n";
         cout << "1) Productos\n";
         cout << "2) Clientes\n";
         cout << "3) Pedidos\n";
@@ -35,185 +30,232 @@ int main()
         cin >> opc;
         system("cls");
 
-        switch (opc)
-        {
-            //MENU PRODUCTOS
-        case 1:
-        {
+        switch (opc) {
+            // MENU PRODUCTOS
+        case 1: {
             int op = 0;
-            while (op != 5)
-            {
+            while (op != 7) {
                 cout << "--- PRODUCTOS ---\n";
                 cout << "1) Insertar\n";
                 cout << "2) Mostrar\n";
                 cout << "3) Buscar\n";
                 cout << "4) Eliminar\n";
-                cout << "5) Volver\n";
+                cout << "5) Guardar en archivo\n";
+                cout << "6) Leer archivo\n";
+                cout << "7) Volver\n";
+                cout << "Seleccione: ";
                 cin >> op;
                 system("cls");
 
-                switch (op)
-                {
-                case 1:
-                {
-                    Producto* p = new Producto();
-                    p->agregarProducto();
+                switch (op) {
+                case 1: {
+                    Producto p;
+                    p.agregarProducto();
                     listaProductos.Insertar(p);
                     break;
                 }
                 case 2:
-                    listaProductos.Mostrar(mostrarProducto);
+                    listaProductos.Mostrar();
                     break;
-
-                case 3:
-                {
+                case 3: {
                     int id;
                     cout << "ID a buscar: ";
                     cin >> id;
-
-                    NodoBase* nodo = listaProductos.Buscar(id, getIDProducto);
-
-                    if (nodo != nullptr) mostrarProducto(nodo->dato);
+                    NodoProducto* nodo = listaProductos.Buscar(id);
+                    if (nodo != nullptr) nodo->dato.mostrarProducto();
                     else cout << "No encontrado.\n";
                     break;
                 }
-                case 4:
-                {
+                case 4: {
                     int id;
                     cout << "ID a eliminar: ";
                     cin >> id;
-
-                    listaProductos.Eliminar(id, getIDProducto);
+                    listaProductos.Eliminar(id);
                     break;
                 }
+                case 5:
+                    listaProductos.GuardarEnArchivo("productos.txt");
+                    break;
+                case 6:
+                    listaProductos.LeerArchivo("productos.txt");
+                    break;
                 }
-
-                if (op != 5)
-                {
-                    cout << endl;
-                    system("pause");
-                }
+                if (op != 7) { cout << endl; system("pause"); }
             }
             break;
         }
 
-        //MENU CLIENTES
-        case 2:
-        {
+              // MENU CLIENTES
+        case 2: {
             int op = 0;
-            while (op != 5)
-            {
+            while (op != 7) {
                 cout << "--- CLIENTES ---\n";
                 cout << "1) Insertar\n";
                 cout << "2) Mostrar\n";
                 cout << "3) Buscar\n";
                 cout << "4) Eliminar\n";
-                cout << "5) Volver\n";
+                cout << "5) Guardar en archivo\n";
+                cout << "6) Leer archivo\n";
+                cout << "7) Volver\n";
+                cout << "Seleccione: ";
                 cin >> op;
                 system("cls");
 
-                switch (op)
-                {
-                case 1:
-                {
-                    Cliente* c = new Cliente();
-                    c->agregarCliente();
+                switch (op) {
+                case 1: {
+                    Cliente c;
+                    c.agregarCliente();
                     listaClientes.Insertar(c);
                     break;
                 }
                 case 2:
-                    listaClientes.Mostrar(mostrarCliente);
+                    listaClientes.Mostrar();
                     break;
-
-                case 3:
-                {
+                case 3: {
                     int id;
                     cout << "ID a buscar: ";
                     cin >> id;
-
-                    NodoBase* nodo = listaClientes.Buscar(id, getIDCliente);
-
-                    if (nodo != nullptr) mostrarCliente(nodo->dato);
+                    NodoCliente* nodo = listaClientes.Buscar(id);
+                    if (nodo != nullptr) nodo->dato.mostrarCliente();
                     else cout << "Cliente no encontrado.\n";
                     break;
                 }
-                case 4:
-                {
+                case 4: {
                     int id;
                     cout << "ID a eliminar: ";
                     cin >> id;
-
-                    listaClientes.Eliminar(id, getIDCliente);
+                    listaClientes.Eliminar(id);
                     break;
                 }
+                case 5:
+                    listaClientes.GuardarEnArchivo("clientes.txt");
+                    break;
+                case 6:
+                    listaClientes.LeerArchivo("clientes.txt");
+                    break;
                 }
-
-                if (op != 5)
-                {
-                    cout << endl;
-                    system("pause");
-                }
+                if (op != 7) { cout << endl; system("pause"); }
             }
             break;
         }
 
-        //MENU PEDIDOS
-        case 3:
-        {
+              // MENU PEDIDOS
+        case 3: {
             int op = 0;
-            while (op != 5)
-            {
+            while (op != 7) {
                 cout << "--- PEDIDOS ---\n";
                 cout << "1) Insertar\n";
                 cout << "2) Mostrar\n";
                 cout << "3) Buscar\n";
                 cout << "4) Eliminar\n";
-                cout << "5) Volver\n";
+                cout << "5) Guardar en archivo\n";
+                cout << "6) Leer archivo\n";
+                cout << "7) Volver\n";
+                cout << "Seleccione: ";
                 cin >> op;
                 system("cls");
 
-                switch (op)
-                {
-                case 1:
-                {
-                    Pedido* p = new Pedido();
-                    p->agregarPedido();
+                switch (op) {
+                case 1: {
+                    Pedido p;
+                    p.agregarPedido();
                     listaPedidos.Insertar(p);
                     break;
                 }
                 case 2:
-                    listaPedidos.Mostrar(mostrarPedido);
+                    listaPedidos.Mostrar();
                     break;
-
-                case 3:
-                {
+                case 3: {
                     int id;
                     cout << "ID a buscar: ";
                     cin >> id;
-
-                    NodoBase* nodo = listaPedidos.Buscar(id, getIDPedido);
-
-                    if (nodo != nullptr) mostrarPedido(nodo->dato);
+                    NodoPedido* nodo = listaPedidos.Buscar(id);
+                    if (nodo != nullptr) nodo->dato.mostrarPedido();
                     else cout << "Pedido no encontrado.\n";
                     break;
                 }
-                case 4:
-                {
+                case 4: {
                     int id;
                     cout << "ID a eliminar: ";
                     cin >> id;
-
-                    listaPedidos.Eliminar(id, getIDPedido);
+                    listaPedidos.Eliminar(id);
                     break;
                 }
+                case 5:
+                    listaPedidos.GuardarEnArchivo("pedidos.txt");
+                    break;
+                case 6:
+                    listaPedidos.LeerArchivo("pedidos.txt");
+                    break;
                 }
-
-                if (op != 5)
-                {
-                    cout << endl;
-                    system("pause");
-                }
+                if (op != 7) { cout << endl; system("pause"); }
             }
+            break;
         }
-        } //switch principal 
-    } //while principal
+
+              // MENU PAGOS
+        case 4: {
+            int op = 0;
+            while (op != 7) {
+                cout << "--- PAGOS ---\n";
+                cout << "1) Insertar\n";
+                cout << "2) Mostrar\n";
+                cout << "3) Buscar\n";
+                cout << "4) Eliminar\n";
+                cout << "5) Guardar en archivo\n";
+                cout << "6) Leer archivo\n";
+                cout << "7) Volver\n";
+                cout << "Seleccione: ";
+                cin >> op;
+                system("cls");
+
+                switch (op) {
+                case 1: {
+                    Pago p;
+                    p.agregarPago();
+                    listaPagos.Insertar(p);
+                    break;
+                }
+                case 2:
+                    listaPagos.Mostrar();
+                    break;
+                case 3: {
+                    int id;
+                    cout << "ID a buscar: ";
+                    cin >> id;
+                    NodoPago* nodo = listaPagos.Buscar(id);
+                    if (nodo != nullptr) nodo->dato.mostrarPago();
+                    else cout << "Pago no encontrado.\n";
+                    break;
+                }
+                case 4: {
+                    int id;
+                    cout << "ID a eliminar: ";
+                    cin >> id;
+                    listaPagos.Eliminar(id);
+                    break;
+                }
+                case 5:
+                    listaPagos.GuardarEnArchivo("pagos.txt");
+                    break;
+                case 6:
+                    listaPagos.LeerArchivo("pagos.txt");
+                    break;
+                }
+                if (op != 7) { cout << endl; system("pause"); }
+            }
+            break;
+        }
+
+        case 0:
+            continuar = false;
+            break;
+
+        default:
+            cout << "Opción inválida.\n";
+            system("pause");
+            break;
+        }
+    }
+    return 0;
+}

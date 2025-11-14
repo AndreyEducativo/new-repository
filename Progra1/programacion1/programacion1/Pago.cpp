@@ -2,10 +2,12 @@
 #include <iostream>
 using namespace std;
 
+//CONSTRUCTOR
 Pago::Pago() : id(0), idPedido(0), monto(0.0), fecha("")
 {
 }
 
+//METODO AGREGAR PAGO 
 void Pago::agregarPago()
 {
     cout << "Ingrese ID del pago: ";
@@ -21,6 +23,7 @@ void Pago::agregarPago()
     cin >> fecha;
 }
 
+//METODOS MOSTRAR PAGO 
 void Pago::mostrarPago()
 {
     cout << "----- PAGO -----\n";
@@ -30,6 +33,7 @@ void Pago::mostrarPago()
     cout << "Fecha: " << fecha << endl;
 }
 
+//METODO GET ID 
 int Pago::getID()
 {
     return id;

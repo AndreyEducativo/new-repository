@@ -2,10 +2,11 @@
 #include <iostream>
 using namespace std;
 
-Cliente::Cliente() : id(0), nombre(""), email("")
+Cliente::Cliente() : id(0), nombre(""), email("") //CONSTRUCTOR
 {
 }
 
+//METODO AGREGAR CLIENTE 
 void Cliente::agregarCliente()
 {
     cout << "Ingrese ID del cliente: ";
@@ -16,6 +17,7 @@ void Cliente::agregarCliente()
     cin >> email;
 }
 
+//METODO MOSTRAR CLIENTE 
 void Cliente::mostrarCliente()
 {
     cout << "----- CLIENTE -----\n";
@@ -24,6 +26,7 @@ void Cliente::mostrarCliente()
     cout << "Email: " << email << endl;
 }
 
+//METODO GET ID 
 int Cliente::getID()
 {
     return id;

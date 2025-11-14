@@ -2,10 +2,12 @@
 #include <iostream>
 using namespace std;
 
-Producto::Producto() : id(0), nombre(""), precio(0.0)
+//CONSTRUCTOR
+Producto::Producto() : id(0), nombre(""), precio(0.0) 
 {
 }
 
+//METODO AGREGAR PRODUCTO
 void Producto::agregarProducto()
 {
     cout << "Ingrese ID del producto: ";
@@ -18,6 +20,7 @@ void Producto::agregarProducto()
     cin >> precio;
 }
 
+//METODO MOSTRAR PRODUCTO 
 void Producto::mostrarProducto()
 {
     cout << "----- PRODUCTO -----\n";
@@ -26,6 +29,7 @@ void Producto::mostrarProducto()
     cout << "Precio: " << precio << endl;
 }
 
+//METODO GET ID 
 int Producto::getID()
 {
     return id;
