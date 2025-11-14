@@ -91,3 +91,19 @@ void ListaPago::LeerArchivo() {
 
     archivo.close();
 }
+
+// NUEVOS METODOS 
+void ListaPago::cantidadTotalPagos()
+{
+
+}
+
+void ListaPago::montoTotalPagos()
+{
+
+}
+
+void ListaPago::promedioPagos()
+{
+
+}

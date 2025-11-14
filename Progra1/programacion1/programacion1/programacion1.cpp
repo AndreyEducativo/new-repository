@@ -204,7 +204,10 @@ int main() {
                 cout << "4) Eliminar\n";
                 cout << "5) Guardar en archivo\n";
                 cout << "6) Leer archivo\n";
-                cout << "7) Volver\n";
+                cout << "7) Cantidad total de pagos\n";
+                cout << "8) Monto total de pagos\n";
+                cout << "9) Promedio de pagos\n"; 
+                cout << "10) Volver\n";
                 cout << "Seleccione: ";
                 cin >> op;
                 system("cls");
@@ -244,8 +247,21 @@ int main() {
                     listaPagos.LeerArchivo();
                     break;
                 }
+                // NUEVOS METODOS 14/11/2025
+                case 7: {
+                    listaPagos.cantidadTotalPagos(); 
+                    break; 
                 }
-                if (op != 7) { cout << endl; system("pause"); }
+                case 8: {
+                    listaPagos.montoTotalPagos(); 
+                    break; 
+                }
+                case 9: {
+                    listaPagos.promedioPagos();
+                    break; 
+                }
+                }
+                if (op != 10) { cout << endl; system("pause"); }
             }
             break;
         }
