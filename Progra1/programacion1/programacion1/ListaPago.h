@@ -15,7 +15,7 @@ public:
     void Eliminar(int id);
     void GuardarEnArchivo();
     void LeerArchivo();
-    //segunda parte del proyecto
+    //METODOS NUEVOS 14/11/2025
     void cantidadTotalPagos(); 
     void montoTotalPagos();
     void promedioPagos();

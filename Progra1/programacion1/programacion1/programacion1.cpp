@@ -134,7 +134,7 @@ int main() {
                     listaClientes.LeerArchivo();
                     break;
                 }
-                if (op != 7) { cout << endl; system(); }
+                if (op != 7) { cout << endl; system("pause"); }
             }
             break;
         }
@@ -188,7 +188,7 @@ int main() {
                     listaPedidos.LeerArchivo();
                     break;
                 }
-                if (op != 7) { cout << endl; system(); }
+                if (op != 7) { cout << endl; system("pause"); }
             }
             break;
         }
@@ -202,12 +202,12 @@ int main() {
                 cout << "2) Mostrar\n";
                 cout << "3) Buscar\n";
                 cout << "4) Eliminar\n";
-                cout << "5) Guardar en archivo\n";
-                cout << "6) Leer archivo\n";
-                cout << "7) Cantidad total de pagos\n";
-                cout << "8) Monto total de pagos\n";
-                cout << "9) Promedio de pagos\n"; 
-                cout << "10) Volver\n";
+                /*cout << "5) Guardar en archivo\n";
+                cout << "6) Leer archivo\n";*/
+                cout << "5) Cantidad total de pagos\n";
+                cout << "6) Monto total de pagos\n";
+                cout << "7) Promedio de pagos\n";
+                cout << "8) Volver\n";
                 cout << "Seleccione: ";
                 cin >> op;
                 system("cls");
@@ -239,29 +239,30 @@ int main() {
                     listaPagos.Eliminar(id);
                     break;
                 }
-                case 5: {
+                /*case 5: {
                     listaPagos.GuardarEnArchivo();
                     break;
                 }
                 case 6: {
                     listaPagos.LeerArchivo();
                     break;
-                }
+                }*/
+
                 // NUEVOS METODOS 14/11/2025
-                case 7: {
+                case 5: {
                     listaPagos.cantidadTotalPagos(); 
                     break; 
                 }
-                case 8: {
+                case 6: {
                     listaPagos.montoTotalPagos(); 
                     break; 
                 }
-                case 9: {
+                case 7: {
                     listaPagos.promedioPagos();
                     break; 
                 }
                 }
-                if (op != 10) { cout << endl; system("pause"); }
+                if (op != 8) { cout << endl; system("pause"); }
             }
             break;
         }
