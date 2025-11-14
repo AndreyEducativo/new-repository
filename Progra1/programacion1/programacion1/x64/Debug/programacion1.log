@@ -1,54 +1,13 @@
-﻿  ListaCliente.cpp
-  ListaPago.cpp
-  ListaPedido.cpp
-  ListaProducto.cpp
-  programacion1.cpp
-  Generando código...
-C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(77,36): error C2660: 'ListaProducto::GuardarEnArchivo': la función no acepta 1 argumentos
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\ListaProducto.h(14,10):
-      vea la declaración de 'ListaProducto::GuardarEnArchivo'
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(77,36):
-      al hacer coincidir la lista de argumentos '(const char [14])'
+﻿  programacion1.cpp
+C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(137,46): error C2660: 'system': la función no acepta 0 argumentos
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\stdlib.h(1211,26):
+      vea la declaración de 'system'
+      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(137,46):
+      al hacer coincidir la lista de argumentos '()'
   
-C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(80,36): error C2660: 'ListaProducto::LeerArchivo': la función no acepta 1 argumentos
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\ListaProducto.h(15,10):
-      vea la declaración de 'ListaProducto::LeerArchivo'
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(80,36):
-      al hacer coincidir la lista de argumentos '(const char [14])'
-  
-C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(131,35): error C2660: 'ListaCliente::GuardarEnArchivo': la función no acepta 1 argumentos
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\ListaCliente.h(15,10):
-      vea la declaración de 'ListaCliente::GuardarEnArchivo'
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(131,35):
-      al hacer coincidir la lista de argumentos '(const char [13])'
-  
-C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(134,35): error C2660: 'ListaCliente::LeerArchivo': la función no acepta 1 argumentos
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\ListaCliente.h(16,10):
-      vea la declaración de 'ListaCliente::LeerArchivo'
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(134,35):
-      al hacer coincidir la lista de argumentos '(const char [13])'
-  
-C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(185,34): error C2660: 'ListaPedido::GuardarEnArchivo': la función no acepta 1 argumentos
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\ListaPedido.h(14,10):
-      vea la declaración de 'ListaPedido::GuardarEnArchivo'
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(185,34):
-      al hacer coincidir la lista de argumentos '(const char [12])'
-  
-C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(188,34): error C2660: 'ListaPedido::LeerArchivo': la función no acepta 1 argumentos
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\ListaPedido.h(15,10):
-      vea la declaración de 'ListaPedido::LeerArchivo'
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(188,34):
-      al hacer coincidir la lista de argumentos '(const char [12])'
-  
-C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(239,32): error C2660: 'ListaPago::GuardarEnArchivo': la función no acepta 1 argumentos
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\ListaPago.h(14,10):
-      vea la declaración de 'ListaPago::GuardarEnArchivo'
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(239,32):
-      al hacer coincidir la lista de argumentos '(const char [10])'
-  
-C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(242,32): error C2660: 'ListaPago::LeerArchivo': la función no acepta 1 argumentos
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\ListaPago.h(15,10):
-      vea la declaración de 'ListaPago::LeerArchivo'
-      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(242,32):
-      al hacer coincidir la lista de argumentos '(const char [10])'
+C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(191,46): error C2660: 'system': la función no acepta 0 argumentos
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\ucrt\stdlib.h(1211,26):
+      vea la declaración de 'system'
+      C:\Users\andre\Desktop\repositoriosGit\new-respository\Progra1\programacion1\programacion1\programacion1.cpp(191,46):
+      al hacer coincidir la lista de argumentos '()'
   
