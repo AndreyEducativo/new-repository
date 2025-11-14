@@ -74,10 +74,10 @@ int main() {
                     break;
                 }
                 case 5:
-                    listaProductos.GuardarEnArchivo("productos.txt");
+                    listaProductos.GuardarEnArchivo();
                     break;
                 case 6:
-                    listaProductos.LeerArchivo("productos.txt");
+                    listaProductos.LeerArchivo();
                     break;
                 }
                 if (op != 7) { cout << endl; system("pause"); }
@@ -128,13 +128,13 @@ int main() {
                     break;
                 }
                 case 5:
-                    listaClientes.GuardarEnArchivo("clientes.txt");
+                    listaClientes.GuardarEnArchivo();
                     break;
                 case 6:
-                    listaClientes.LeerArchivo("clientes.txt");
+                    listaClientes.LeerArchivo();
                     break;
                 }
-                if (op != 7) { cout << endl; system("pause"); }
+                if (op != 7) { cout << endl; system(); }
             }
             break;
         }
@@ -182,13 +182,13 @@ int main() {
                     break;
                 }
                 case 5:
-                    listaPedidos.GuardarEnArchivo("pedidos.txt");
+                    listaPedidos.GuardarEnArchivo();
                     break;
                 case 6:
-                    listaPedidos.LeerArchivo("pedidos.txt");
+                    listaPedidos.LeerArchivo();
                     break;
                 }
-                if (op != 7) { cout << endl; system("pause"); }
+                if (op != 7) { cout << endl; system(); }
             }
             break;
         }
@@ -236,10 +236,10 @@ int main() {
                     break;
                 }
                 case 5:
-                    listaPagos.GuardarEnArchivo("pagos.txt");
+                    listaPagos.GuardarEnArchivo();
                     break;
                 case 6:
-                    listaPagos.LeerArchivo("pagos.txt");
+                    listaPagos.LeerArchivo();
                     break;
                 }
                 if (op != 7) { cout << endl; system("pause"); }
