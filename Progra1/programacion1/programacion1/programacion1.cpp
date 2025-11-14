@@ -216,9 +216,10 @@ int main() {
                     listaPagos.Insertar(p);
                     break;
                 }
-                case 2:
+                case 2: {
                     listaPagos.Mostrar();
                     break;
+                }
                 case 3: {
                     int id;
                     cout << "ID a buscar: ";
@@ -235,12 +236,14 @@ int main() {
                     listaPagos.Eliminar(id);
                     break;
                 }
-                case 5:
+                case 5: {
                     listaPagos.GuardarEnArchivo();
                     break;
-                case 6:
+                }
+                case 6: {
                     listaPagos.LeerArchivo();
                     break;
+                }
                 }
                 if (op != 7) { cout << endl; system("pause"); }
             }
