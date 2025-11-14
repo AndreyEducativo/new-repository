@@ -2,40 +2,35 @@
 #include <iostream>
 using namespace std;
 
-// CONSTRUCTORES
-Pedido::Pedido()
+Pedido::Pedido() : id(0), idCliente(0), idProducto(0), cantidad(0)
 {
-}
-Pedido::Pedido(int Id, int IdCliente, int IdProducto, int Cantidad)
-{
-	id = Id;
-	idCliente = IdCliente;
-	idProducto = IdProducto;
-	cantidad = Cantidad;
 }
 
-// METODOS
 void Pedido::agregarPedido()
 {
-	cout << "Ingrese el ID del pedido: ";
-	cin >> id;
-	cout << "Ingrese el ID del cliente: ";
-	cin >> idCliente;
-	cout << "Ingrese el ID del producto: ";
-	cin >> idProducto;
-	cout << "Ingrese la cantidad: ";
-	cin >> cantidad;
+    cout << "Ingrese ID del pedido: ";
+    cin >> id;
 
-	cout << "Pedido cargado correctamente..." << endl;
+    cout << "Ingrese ID del cliente: ";
+    cin >> idCliente;
+
+    cout << "Ingrese ID del producto: ";
+    cin >> idProducto;
+
+    cout << "Ingrese cantidad: ";
+    cin >> cantidad;
 }
 
-void Pedido::mostrarPedido() 
+void Pedido::mostrarPedido()
 {
-	cout << "-------------------------" << endl;
-	cout << "ID del pedido: " << id << endl;
-	cout << "ID del cliente: " << idCliente << endl;
-	cout << "ID del producto: " << idProducto << endl;
-	cout << "Cantidad: " << cantidad << endl;
-	cout << "-------------------------" << endl;
+    cout << "----- PEDIDO -----\n";
+    cout << "ID Pedido: " << id << endl;
+    cout << "ID Cliente: " << idCliente << endl;
+    cout << "ID Producto: " << idProducto << endl;
+    cout << "Cantidad: " << cantidad << endl;
 }
 
+int Pedido::getID()
+{
+    return id;
+}

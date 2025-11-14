@@ -1,39 +1,32 @@
 #include "Producto.h"
 #include <iostream>
-using namespace std; 
+using namespace std;
 
-// CONSTRUCTORES
-Producto::Producto()
+Producto::Producto() : id(0), nombre(""), precio(0.0)
 {
 }
 
-Producto::Producto(int Id, string Nombre, double Precio) 
-{
-	id = Id;
-	nombre = Nombre;
-	precio = Precio;
-}
-
-// METODOS
 void Producto::agregarProducto()
 {
-	cout << "Ingrese el ID del producto: ";
-	cin >> id;
+    cout << "Ingrese ID del producto: ";
+    cin >> id;
 
-	cout << "Ingrese el nombre del producto: ";
-	cin >> nombre; // nombre = string, sin espacios
+    cout << "Ingrese nombre del producto: ";
+    cin >> nombre;
 
-	cout << "Ingrese el precio del producto: ";
-	cin >> precio;
-
-	cout << "Producto cargado correctamente..." << endl;
+    cout << "Ingrese precio del producto: ";
+    cin >> precio;
 }
 
 void Producto::mostrarProducto()
 {
-	cout << "-------------------------" << endl;
-	cout << "ID: " << id << endl;
-	cout << "Nombre: " << nombre << endl;
-	cout << "Precio: " << precio << endl;
-	cout << "-------------------------" << endl;
+    cout << "----- PRODUCTO -----\n";
+    cout << "ID: " << id << endl;
+    cout << "Nombre: " << nombre << endl;
+    cout << "Precio: " << precio << endl;
+}
+
+int Producto::getID()
+{
+    return id;
 }

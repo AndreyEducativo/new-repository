@@ -4,19 +4,13 @@ using namespace std;
 
 class Cliente
 {
-	public:
-		// ATRIBUTOS
-	int id;
-	string nombre;
-	string email;
+public:
+    int id;
+    string nombre;
+    string email;
 
-	// CONSTRUCTORES
-	Cliente(); 
-	Cliente(int Id, string Nombre, string Email); 
-
-	// METODOS
-	void agregarCliente();
-	void mostrarCliente();
-
+    Cliente();
+    void agregarCliente();
+    void mostrarCliente();
+    int getID();
 };
-

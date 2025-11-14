@@ -2,39 +2,35 @@
 #include <iostream>
 using namespace std;
 
-// CONTRUCTORES
-Pago::Pago()
+Pago::Pago() : id(0), idPedido(0), monto(0.0), fecha("")
 {
-}
-Pago::Pago(int Id, int IdPedido, double Monto, string Fecha) 
-{
-	id = Id;
-	idPedido = IdPedido;
-	monto = Monto;
-	fecha = Fecha;
 }
 
-// METODOS
 void Pago::agregarPago()
 {
-	cout << "Ingrese el ID del pago: ";
-	cin >> id;
-	cout << "Ingrese el ID del pedido asociado: ";
-	cin >> idPedido;
-	cout << "Ingrese el monto del pago: ";
-	cin >> monto;
-	cout << "Ingrese la fecha del pago (DD/MM/AAAA): ";
-	cin >> fecha;
+    cout << "Ingrese ID del pago: ";
+    cin >> id;
 
-	cout << "Pago cargado correctamente..." << endl;
+    cout << "Ingrese ID del pedido: ";
+    cin >> idPedido;
+
+    cout << "Ingrese monto: ";
+    cin >> monto;
+
+    cout << "Ingrese fecha (DD/MM/AAAA): ";
+    cin >> fecha;
 }
 
-void Pago::mostrarPago() 
+void Pago::mostrarPago()
 {
-	cout << "-------------------------" << endl;
-	cout << "ID del pago: " << id << endl;
-	cout << "ID del pedido asociado: " << idPedido << endl;
-	cout << "Monto del pago: " << monto << endl;
-	cout << "Fecha del pago: " << fecha << endl;
-	cout << "-------------------------" << endl;
+    cout << "----- PAGO -----\n";
+    cout << "ID Pago: " << id << endl;
+    cout << "ID Pedido: " << idPedido << endl;
+    cout << "Monto: " << monto << endl;
+    cout << "Fecha: " << fecha << endl;
+}
+
+int Pago::getID()
+{
+    return id;
 }
