@@ -10,7 +10,9 @@ public:
 
     void Insertar(Cliente c);
     void Mostrar();
-    NodoCliente* Buscar(int id);
+
+    NodoCliente* Buscar(int id); 
+
     void Eliminar(int id);
     void GuardarEnArchivo();
     void LeerArchivo();

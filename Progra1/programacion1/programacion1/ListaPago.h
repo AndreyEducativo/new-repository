@@ -9,7 +9,9 @@ public:
 
     void Insertar(Pago p);
     void Mostrar();
+
     NodoPago* Buscar(int id);
+
     void Eliminar(int id);
     void GuardarEnArchivo();
     void LeerArchivo();

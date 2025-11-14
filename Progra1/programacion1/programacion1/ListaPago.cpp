@@ -3,7 +3,9 @@
 #include <fstream>
 using namespace std;
 
-ListaPago::ListaPago() : head(nullptr) {}
+ListaPago::ListaPago() : head(nullptr) 
+{
+}
 
 void ListaPago::Insertar(Pago p) {
     NodoPago* nuevo = new NodoPago(p);

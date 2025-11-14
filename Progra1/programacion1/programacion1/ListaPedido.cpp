@@ -3,7 +3,9 @@
 #include <fstream>
 using namespace std;
 
-ListaPedido::ListaPedido() : head(nullptr) {}
+ListaPedido::ListaPedido() : head(nullptr) 
+{
+}
 
 void ListaPedido::Insertar(Pedido p) {
     NodoPedido* nuevo = new NodoPedido(p);

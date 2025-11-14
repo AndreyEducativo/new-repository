@@ -6,5 +6,6 @@ public:
     Producto dato;
     NodoProducto* siguiente;
     NodoProducto* anterior;
+
     NodoProducto(Producto p);
 };

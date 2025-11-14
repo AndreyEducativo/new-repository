@@ -9,7 +9,9 @@ public:
 
     void Insertar(Pedido p);
     void Mostrar();
+
     NodoPedido* Buscar(int id);
+
     void Eliminar(int id);
     void GuardarEnArchivo();
     void LeerArchivo();

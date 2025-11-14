@@ -3,7 +3,9 @@
 #include <fstream>
 using namespace std;
 
-ListaCliente::ListaCliente() : head(nullptr) {}
+ListaCliente::ListaCliente() : head(nullptr) 
+{
+}
 
 void ListaCliente::Insertar(Cliente c) {
     NodoCliente* nuevo = new NodoCliente(c);

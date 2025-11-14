@@ -9,7 +9,9 @@ public:
 
     void Insertar(Producto p);
     void Mostrar();
+
     NodoProducto* Buscar(int id);
+
     void Eliminar(int id);
     void GuardarEnArchivo();
     void LeerArchivo();

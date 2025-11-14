@@ -1,9 +1,11 @@
 #include "ListaProducto.h"
 #include <iostream>
-#include <fstream>
+#include <fstream> 
 using namespace std;
 
-ListaProducto::ListaProducto() : head(nullptr) {}
+ListaProducto::ListaProducto() : head(nullptr) 
+{
+}
 
 void ListaProducto::Insertar(Producto p) {
     NodoProducto* nuevo = new NodoProducto(p);
