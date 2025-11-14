@@ -1,6 +1,6 @@
 #include "funcionesGlobales.h"
 
-// Mostrar
+// MOSTRAR
 void mostrarCliente(void* dato) 
 { 
 	((Cliente*)dato)->mostrarCliente(); 
@@ -21,7 +21,7 @@ void mostrarPago(void* dato)
 	((Pago*)dato)->mostrarPago(); 
 }
 
-// Obtener ID
+// OBTENER ID
 int getIDCliente(void* dato) 
 { 
 	return ((Cliente*)dato)->getID(); 

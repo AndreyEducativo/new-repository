@@ -23,9 +23,9 @@ int main()
     while (continuar)
     {
         system("cls");
-        cout << "---------------------------";
+        cout << "-----------------------------------\n"; 
         cout << "\tCOMERCIO ELECTRONICO\n";
-        cout << "---------------------------";
+        cout << "-----------------------------------\n";
         cout << "1) Productos\n";
         cout << "2) Clientes\n";
         cout << "3) Pedidos\n";
@@ -33,18 +33,17 @@ int main()
         cout << "0) Salir\n";
         cout << "Seleccione: ";
         cin >> opc;
-
         system("cls");
 
-        // PRODUCTOS
-        if (opc == 1)
+        switch (opc)
+        {
+            //MENU PRODUCTOS
+        case 1:
         {
             int op = 0;
             while (op != 5)
             {
-                cout << "--------------------";
-                cout << "\tPRODUCTOS \n";
-                cout << "--------------------";
+                cout << "--- PRODUCTOS ---\n";
                 cout << "1) Insertar\n";
                 cout << "2) Mostrar\n";
                 cout << "3) Buscar\n";
@@ -53,17 +52,20 @@ int main()
                 cin >> op;
                 system("cls");
 
-                if (op == 1)
+                switch (op)
+                {
+                case 1:
                 {
                     Producto* p = new Producto();
                     p->agregarProducto();
                     listaProductos.Insertar(p);
+                    break;
                 }
-                else if (op == 2)
-                {
+                case 2:
                     listaProductos.Mostrar(mostrarProducto);
-                }
-                else if (op == 3)
+                    break;
+
+                case 3:
                 {
                     int id;
                     cout << "ID a buscar: ";
@@ -71,18 +73,19 @@ int main()
 
                     NodoBase* nodo = listaProductos.Buscar(id, getIDProducto);
 
-                    if (nodo != nullptr)
-                        mostrarProducto(nodo->dato);
-                    else
-                        cout << "No encontrado.\n";
+                    if (nodo != nullptr) mostrarProducto(nodo->dato);
+                    else cout << "No encontrado.\n";
+                    break;
                 }
-                else if (op == 4)
+                case 4:
                 {
                     int id;
                     cout << "ID a eliminar: ";
                     cin >> id;
 
                     listaProductos.Eliminar(id, getIDProducto);
+                    break;
+                }
                 }
 
                 if (op != 5)
@@ -91,19 +94,16 @@ int main()
                     system("pause");
                 }
             }
+            break;
         }
 
-
-
-        // CLIENTES
-        if (opc == 2)
+        //MENU CLIENTES
+        case 2:
         {
             int op = 0;
             while (op != 5)
             {
-                cout << "--------------------";
-                cout << "\tCLIENTES \n";
-                cout << "--------------------";
+                cout << "--- CLIENTES ---\n";
                 cout << "1) Insertar\n";
                 cout << "2) Mostrar\n";
                 cout << "3) Buscar\n";
@@ -112,17 +112,20 @@ int main()
                 cin >> op;
                 system("cls");
 
-                if (op == 1)
+                switch (op)
+                {
+                case 1:
                 {
                     Cliente* c = new Cliente();
                     c->agregarCliente();
                     listaClientes.Insertar(c);
+                    break;
                 }
-                else if (op == 2)
-                {
+                case 2:
                     listaClientes.Mostrar(mostrarCliente);
-                }
-                else if (op == 3)
+                    break;
+
+                case 3:
                 {
                     int id;
                     cout << "ID a buscar: ";
@@ -130,18 +133,19 @@ int main()
 
                     NodoBase* nodo = listaClientes.Buscar(id, getIDCliente);
 
-                    if (nodo != nullptr)
-                        mostrarCliente(nodo->dato);
-                    else
-                        cout << "Cliente no encontrado.\n";
+                    if (nodo != nullptr) mostrarCliente(nodo->dato);
+                    else cout << "Cliente no encontrado.\n";
+                    break;
                 }
-                else if (op == 4)
+                case 4:
                 {
                     int id;
                     cout << "ID a eliminar: ";
                     cin >> id;
 
                     listaClientes.Eliminar(id, getIDCliente);
+                    break;
+                }
                 }
 
                 if (op != 5)
@@ -150,19 +154,16 @@ int main()
                     system("pause");
                 }
             }
+            break;
         }
 
-
-
-        // PEDIDOS
-        if (opc == 3)
+        //MENU PEDIDOS
+        case 3:
         {
             int op = 0;
             while (op != 5)
             {
-                cout << "--------------------";
-                cout << "\tPEDIDOS \n";
-                cout << "--------------------";
+                cout << "--- PEDIDOS ---\n";
                 cout << "1) Insertar\n";
                 cout << "2) Mostrar\n";
                 cout << "3) Buscar\n";
@@ -171,17 +172,20 @@ int main()
                 cin >> op;
                 system("cls");
 
-                if (op == 1)
+                switch (op)
+                {
+                case 1:
                 {
                     Pedido* p = new Pedido();
                     p->agregarPedido();
                     listaPedidos.Insertar(p);
+                    break;
                 }
-                else if (op == 2)
-                {
+                case 2:
                     listaPedidos.Mostrar(mostrarPedido);
-                }
-                else if (op == 3)
+                    break;
+
+                case 3:
                 {
                     int id;
                     cout << "ID a buscar: ";
@@ -189,18 +193,19 @@ int main()
 
                     NodoBase* nodo = listaPedidos.Buscar(id, getIDPedido);
 
-                    if (nodo != nullptr)
-                        mostrarPedido(nodo->dato);
-                    else
-                        cout << "Pedido no encontrado.\n";
+                    if (nodo != nullptr) mostrarPedido(nodo->dato);
+                    else cout << "Pedido no encontrado.\n";
+                    break;
                 }
-                else if (op == 4)
+                case 4:
                 {
                     int id;
                     cout << "ID a eliminar: ";
                     cin >> id;
 
                     listaPedidos.Eliminar(id, getIDPedido);
+                    break;
+                }
                 }
 
                 if (op != 5)
@@ -210,73 +215,5 @@ int main()
                 }
             }
         }
-
-
-
-        // PAGOS
-        if (opc == 4)
-        {
-            int op = 0;
-            while (op != 5)
-            {
-                cout << "--------------------";
-                cout << "\tPAGOS \n";
-                cout << "--------------------";
-                cout << "1) Insertar\n";
-                cout << "2) Mostrar\n";
-                cout << "3) Buscar\n";
-                cout << "4) Eliminar\n";
-                cout << "5) Volver\n";
-                cin >> op;
-                system("cls");
-
-                if (op == 1)
-                {
-                    Pago* p = new Pago();
-                    p->agregarPago();
-                    listaPagos.Insertar(p);
-                }
-                else if (op == 2)
-                {
-                    listaPagos.Mostrar(mostrarPago);
-                }
-                else if (op == 3)
-                {
-                    int id;
-                    cout << "ID a buscar: ";
-                    cin >> id;
-
-                    NodoBase* nodo = listaPagos.Buscar(id, getIDPago);
-
-                    if (nodo != nullptr)
-                        mostrarPago(nodo->dato);
-                    else
-                        cout << "Pago no encontrado.\n";
-                }
-                else if (op == 4)
-                {
-                    int id;
-                    cout << "ID a eliminar: ";
-                    cin >> id;
-
-                    listaPagos.Eliminar(id, getIDPago);
-                }
-
-                if (op != 5)
-                {
-                    cout << endl;
-                    system("pause");
-                }
-            }
-        }
-
-
-
-
-
-        if (opc == 0)
-            continuar = false;
-    }
-
-    return 0;
-}
+        } //switch principal 
+    } //while principal
