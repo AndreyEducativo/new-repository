@@ -97,7 +97,9 @@ void ListaPago::cantidadTotalPagos()
 {
     int contador = 0;
     NodoPago* actual = head;
+
     while (actual != nullptr) {
+
         contador++;
         actual = actual->siguiente;
     }
@@ -108,6 +110,7 @@ void ListaPago::montoTotalPagos()
 {
     double total = 0.0;
     NodoPago* actual = head;
+
     while (actual != nullptr) {
         total += actual->dato.monto;
         actual = actual->siguiente;
@@ -120,6 +123,7 @@ void ListaPago::promedioPagos()
     int contador = 0;
     double total = 0.0;
     NodoPago* actual = head;
+
     while (actual != nullptr) {
         total += actual->dato.monto;
         contador++;
