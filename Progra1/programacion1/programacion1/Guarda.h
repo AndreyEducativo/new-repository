@@ -11,6 +11,7 @@ protected:
 
 public:
 	Guarda(string nombre, string cedula, int edad, bool tieneArma, string horario);
+	Guarda(); // Constructor por defecto
 
 
 

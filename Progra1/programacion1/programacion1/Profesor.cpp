@@ -3,5 +3,6 @@
 //float Salario;
 
 void Profesor::Mostrar() {
-	cout << "Salario:" << Salario;
+	cout << "Salario:";
+	cin >> Salario;
 }

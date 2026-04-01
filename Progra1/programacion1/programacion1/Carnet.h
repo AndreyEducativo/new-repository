@@ -7,5 +7,6 @@ public:
 	string Numero;
 	int AnioValidez;
 
+	void Mostrar();
 };
 
